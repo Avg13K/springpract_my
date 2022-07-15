@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Блог сайта</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="container mt-5 mb-10">
+  <h1>Добавление студента</h1>
+  <form action="/student/add" method="post">
+    <input type="text" name="name" placeholder="ФИО студента" class="form-controll"><br>
+    <input type="text" name="address" placeholder="Адресс студента" class="form-controll"><br>
+    <input type="text" name="phone_num" placeholder="Номер телефона" class="form-controll"><br>
+    <input type="text" name="email" placeholder="Эл. почта" class="form-controll"><br>
+    <input type="text" name="avg_academic_performance" placeholder="Средняя успеваемость" class="form-controll"><br>
+
+    <button type="submit" class="btn btn-success">Добавить студента</button>
+  </form>
+</div>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
